@@ -3,7 +3,7 @@ int frequencia = 0; // frequência
 long intervalo = 1000; //tempo em milisegundos 
 long tempo_atual;
 void setup() {
-  Serial.begin(9600); //inicialização do monitor Serial
+  Serial.begin(115200); //inicialização do monitor Serial
   pinMode(sensor, INPUT); // inicialização do sensor piezoeletrico
 }
 
@@ -19,6 +19,7 @@ void loop() {
       }
     frequencia++;
     Serial.println(frequencia);
+    //Serial.println(vibracao);
     delay(68); //delay que serve para a vibração parar no tempo certo
   }
 }
